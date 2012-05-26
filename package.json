@@ -18,6 +18,6 @@
     "node": "*"
   },
   "bin": {
-    "glob-writer": "writer.js"
+    "glog-writer": "writer.js"
   }
 }

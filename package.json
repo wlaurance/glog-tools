@@ -16,7 +16,7 @@
   "optionalDependencies": {},
   "engines": {
     "node": "*"
-  }
+  },
   "bin":{
     "glob-writer":"writer.js"
   }

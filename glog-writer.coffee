@@ -4,7 +4,7 @@ fs = require 'fs'
 
 exports.Writer = ->
   program
-    .option('-f, --file [file]', 'File you want to start writing defaults to date+title.md')
+    .option('-f, --file [file]', 'File you want to start writing defaults to date+title.txt')
     .option('-g, --guido [file]', 'json file with author. Default => ./guido.json', './guido.json')
   program.parse process.argv
   header = {}
@@ -26,7 +26,7 @@ exports.Writer = ->
           else if defactoauthor isnt ''
             header.author = defactoauthor
           console.log JSON.stringify header
-          file = header.date + (header.title.toLowerCase().split(' ').join('')) + '.md' unless program.file?
+          file = header.date + (header.title.toLowerCase().split(' ').join('')) + '.txt' unless program.file?
           file = program.file if program.file?
           fs.writeFile file, JSON.stringify(header), (err)->
             throw err if err?

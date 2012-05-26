@@ -9,7 +9,7 @@
 
   exports.Writer = function() {
     var header, input;
-    program.option('-f, --file [file]', 'File you want to start writing defaults to date+title.md').option('-g, --guido [file]', 'json file with author. Default => ./guido.json', './guido.json');
+    program.option('-f, --file [file]', 'File you want to start writing defaults to date+title.txt').option('-g, --guido [file]', 'json file with author. Default => ./guido.json', './guido.json');
     program.parse(process.argv);
     header = {};
     input = rl.createInterface(process.stdin, process.stdout);
@@ -35,7 +35,7 @@
             }
             console.log(JSON.stringify(header));
             if (program.file == null) {
-              file = header.date + (header.title.toLowerCase().split(' ').join('')) + '.md';
+              file = header.date + (header.title.toLowerCase().split(' ').join('')) + '.txt';
             }
             if (program.file != null) file = program.file;
             return fs.writeFile(file, JSON.stringify(header), function(err) {

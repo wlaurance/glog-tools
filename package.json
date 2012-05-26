@@ -2,7 +2,7 @@
   "author": "Will S. Laurance <w.laurance@gmail.com> (http://blog.wlaurance.com)",
   "name": "glog-tools",
   "description": "Simple tool package for writing glog articles",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/wlaurance/glog-tools/wiki",
   "repository": {
     "type": "git",
@@ -10,14 +10,14 @@
   },
   "main": "glog-writer.js",
   "dependencies": {
-    "commander":"*"
+    "commander": "*"
   },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
     "node": "*"
   },
-  "bin":{
-    "glob-writer":"writer.js"
+  "bin": {
+    "glob-writer": "writer.js"
   }
 }

@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/wlaurance/glog-tools.png)](http://travis-ci.org/wlaurance/glog-tools)
 glog-tools
 ==========
 
